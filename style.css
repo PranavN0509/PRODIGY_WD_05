@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu';
+    font-size: 62.5%;
+}
+
+:root{
+    --background-color: #8C52FF;
+    --background-color: linear-gradient(to bottom right,rgb(0, 115, 255),  rgb(196, 252, 255));
+    --background-color: linear-gradient(to bottom right,rgb(255, 153, 0),  rgb(0, 255, 213));
+    --border-color: #fff;
+    --button-background: #b145ff;
+    --text-color: #ffffff;
+}
+
+body{
+    background: var(--background-color);
+    background: url(./WeatherImg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#weather-container{
+    background: rgba(255,255,255,0.3);
+    background: var(--background-color);
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255, 255, 0.1);
+    text-align: center;
+}
+
+#weather-container h2{
+    font-size: 3rem;
+    color: var(--text-color);
+}
+
+#city-name{
+    font-size: 1.5rem;
+    width: calc(100% - 1.5rem);
+    padding: 1rem;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+}
+
+button{
+    background: var(--button-background);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 10rem;
+    font-size: 1.5rem;
+}
+
+button:hover{
+    background: #8b48d7;
+}
+
+#temp-div p{
+    font-size: 5rem;
+}
+
+#weather-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+}
+
+#weather-info p{
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+#weather-icon{
+    width: 10rem;
+    height: 10rem;
+    display: none;
+}
+
+#hourly-forecast{
+    width: 40rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hourly-item{
+    flex: 0 0 auto;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+}
+
+.hourly-item span{
+    font-size: 1.6rem;
+}
+
+#hourly-item img{
+    width: 3rem;
+    height: 3rem;
+}
+
+#hourly-heading{
+    color: #fff;
+}
